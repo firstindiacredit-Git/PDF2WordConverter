@@ -11,6 +11,9 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+app.get('/', (req, res)=>{
+    res.send("Welcome to PDF to Word Converter API!");
+});
 app.listen(PORT, () => {
     console.log("Server started successfully at Port: " + PORT);
 });
