@@ -48,7 +48,7 @@ function App() {
         if (uploadResponse.uploadSuccess) {
             const convertOptions = {
                 method: "POST",
-                url: `http://localhost:4000/api/file/convert?fileId=${uploadResponse.fileId}`,
+                url: `https://pdf-2-word-backend.vercel.app/api/file/convert?fileId=${uploadResponse.fileId}`,
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -74,7 +74,7 @@ function App() {
         if (convertResponse.convertSuccess) {
             const statusOptions = {
                 method: "GET",
-                url: `http://localhost:4000/api/file/status?taskId=${convertResponse.taskId}`,
+                url: `https://pdf-2-word-backend.vercel.app/api/file/status?taskId=${convertResponse.taskId}`,
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -102,7 +102,7 @@ function App() {
         if (checkStatusResponse.statusSuccess) {
             const downloadOptions = {
                 method: "GET",
-                url: `http://localhost:4000/api/file/download?fileId=${checkStatusResponse.fileId}`,
+                url: `https://pdf-2-word-backend.vercel.app/api/file/download?fileId=${checkStatusResponse.fileId}`,
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -128,7 +128,7 @@ function App() {
                 const cloudinaryUploadOptions = {
                     method: "get",
                     url:
-                        "http://localhost:4000/api/file/cloud/upload?fileName=" +
+                        "https://pdf-2-word-backend.vercel.app/api/file/cloud/upload?fileName=" +
                         downloadResponse.fileName,
                     headers: {
                         "Content-Type": "application/json",
@@ -161,7 +161,7 @@ function App() {
 
             const uploadOptions = {
                 method: "POST",
-                url: "http://localhost:4000/api/file/upload",
+                url: "https://pdf-2-word-backend.vercel.app/api/file/upload",
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
