@@ -150,7 +150,7 @@ function App() {
                         setShowErrorModal(true);
                     });
             }
-        }, 5000);
+        }, 10000);
     }, [downloadResponse]);
 
     const formSubmitHandler = (e) => {
