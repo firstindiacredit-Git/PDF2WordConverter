@@ -29,7 +29,14 @@ const cloudinary = require("cloudinary");
 // Initialize the express app
 const app = express();
 const PORT = process.env.PORT || 8000;
-app.use(cors());
+
+app.use(cors({
+    origin: 'https://pdftowordpizeonfly.vercel.app', // Set this to your frontend URL
+    methods: ['GET', 'POST'],
+    credentials: true,
+}));
+
+
 // Configure Cloudinary
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
