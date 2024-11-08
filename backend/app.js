@@ -12,8 +12,8 @@ const handleFileRoute = require("./routes/handleFileRoute");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: 'https://pdftowordpizeonfly.vercel.app',methods: ['GET', 'POST'],
-    credentials: true }));
+//app.use(cors({ origin: 'https://pdftowordpizeonfly.vercel.app',methods: ['GET', 'POST'],
+   // credentials: true }));
 
 
 //cors and fileupload middleware
