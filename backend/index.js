@@ -29,7 +29,7 @@ const cloudinary = require("cloudinary");
 // Initialize the express app
 const app = express();
 const PORT = process.env.PORT || 8000;
-
+app.use(cors());
 // Configure Cloudinary
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
@@ -40,7 +40,7 @@ cloudinary.config({
 // Express middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors( ));
+
 
 // File upload middleware
 app.use(fileUpload({
