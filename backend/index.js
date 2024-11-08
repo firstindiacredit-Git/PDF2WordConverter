@@ -11,7 +11,8 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-app.use(cors());
+app.use(cors({ origin: 'https://pdftowordpizeonfly.vercel.app',methods: ['GET', 'POST'],
+    credentials: true }));
 app.get('/', (req, res)=>{
     res.send("Welcome to PDF to Word Converter API!");
 });
