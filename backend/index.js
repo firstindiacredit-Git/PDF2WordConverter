@@ -11,9 +11,7 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-app.use(cors({
-    origin: '*'// or set to '*' to allow all origins
-}));
+app.use(cors());
 app.get('/', (req, res)=>{
     res.send("Welcome to PDF to Word Converter API!");
 });
