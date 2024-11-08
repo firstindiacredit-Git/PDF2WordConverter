@@ -8,7 +8,9 @@ const cors = require("cors");
 const handleFileRoute = require("./routes/handleFileRoute");
 
 //express middlewares
-app.use(cors());
+app.use(cors({
+    origin: '*'// or set to '*' to allow all origins
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
